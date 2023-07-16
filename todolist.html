@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To-Do List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
+      margin: 0;
+      padding: 0;
+      background-image: url(https://cdn.wallpapersafari.com/81/35/VeCZ2r.jpg);
+      /**background-repeat: no-repeat;**/
+      background-size: cover;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      padding: 20px;
+      margin: 0;
+      background-color: #ca9898;
+      border-bottom: 1px solid #ddd;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .todo-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .todo-item {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+      background-color: #cecef0;
+    }
+
+    .todo-item:last-child {
+      border-bottom: none;
+    }
+
+    .todo-item input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    .todo-item label {
+      flex-grow: 1;
+      color: #333;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .todo-item input[type="checkbox"]:checked + label {
+      text-decoration: line-through;
+      color: #888;
+    }
+
+    .todo-item button {
+      background-color: #ff4136;
+      color: #fff;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .todo-item button:hover {
+      background-color: #d11c00;
+    }
+
+    .add-task {
+      padding: 15px;
+      background-color: #171515;
+      border-top: 1px solid #ddd;
+      border-radius: 0 0 5px 5px;
+    }
+
+    .add-task input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+    }
+
+    .add-task button {
+      margin-top: 10px;
+      background-color: #39cccc;
+      color: #fff;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .add-task button:hover {
+      background-color: #2bb3b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>To-Do List</h1>
+    <ul class="todo-list">
+      <li class="todo-item">
+        <input type="checkbox" id="item1">
+        <label for="item1">Task 1: Landing Webpage</label>
+        <button>Delete</button>
+      </li>
+      <li class="todo-item">
+        <input type="checkbox" id="item2">
+        <label for="item2">Task 2: To do list Webpage</label>
+        <button>Delete</button>
+      </li>
+      <li class="todo-item">
+        <input type="checkbox" id="item3">
+        <label for="item3">Task 3: </label>
+        <button>Delete</button>
+      </li>
+    </ul>
+    <div class="add-task">
+      <input type="text" placeholder="Add a task">
+      <button>Add</button>
+    </div>
+  </div>
+</body>
+</html>
